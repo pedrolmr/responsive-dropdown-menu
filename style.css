@@ -4,6 +4,15 @@
     margin:0;
     font-family: 'Epilogue', sans-serif;
 }
+body .fa-bars{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1rem;
+    cursor: pointer;
+    margin:1rem 1.5rem 0 0;
+    display: block;
+}
 nav{
     border:1px solid rgb(236, 236, 236);
     width:200px;
@@ -13,11 +22,14 @@ nav{
     right:0;
     overflow:hidden;
     padding: 1rem;
+    z-index: 20;
+    display: none;
 }
 .menu{
     list-style:none;
-    padding:0;
+    padding:1.2em 0 0 0;
     margin:0;
+    z-index: 20;
 }
 .menu li{
     padding:0.5rem 0;
@@ -49,19 +61,27 @@ nav{
     text-decoration:none;
 
 }
-
+.menu .fa-xmark{
+    position:absolute;
+    right:0;
+    top:0;
+    padding:0.5em 1.5rem 0 0;
+    font-size:1.2rem;
+    color:hsl(0, 0%, 41%);
+}
 @media only screen and (min-width: 768px){
     nav{
         position: relative;
         width:100%;
         position:fixed;
         top:0;
-        
+        display: block;
     }
     .menu{
         display: flex;
         flex-direction: row;
         position:fixed;
+        padding-top:0;
     }
     .menu > li{
         width:6.7rem;
@@ -82,6 +102,12 @@ nav{
     }
     .menu li#dropdown .sub-menu li i{
         margin:0 0.5rem 0 0;
+    }
+    .fa-xmark{
+        display:none;
+    }
+    body .fa-bars{
+        display: none;
     }
 
 }
