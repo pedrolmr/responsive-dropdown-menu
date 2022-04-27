@@ -4,8 +4,8 @@
     margin:0;
     font-family: 'Epilogue', sans-serif;
 }
-.mobile-nav{
-    border:2px solid purple;
+nav{
+    border:1px solid rgb(236, 236, 236);
     width:200px;
     height:100vh;
     position:fixed;
@@ -14,42 +14,74 @@
     overflow:hidden;
     padding: 1rem;
 }
-ul.menu{
+.menu{
     list-style:none;
     padding:0;
     margin:0;
 }
-ul.menu li{
-    /* display: flex;
-    flex-direction: column; */
+.menu li{
     padding:0.5rem 0;
-    /* border:1px solid black; */
 }
-ul.menu li a{
+.menu li a{
     text-decoration:none;
     color:hsl(0, 0%, 41%)
 }
-ul.menu li i {
+.menu li i {
     font-size:0.9rem;
     margin-left:0.5rem;
-    /* line-height: 2rem; */
 }
-ul.menu li .sub-menu{
+.menu li .sub-menu{
     display: none;
-    margin-left: 1rem;
+    margin: 8px 0 0 8px;
 }
-ul.menu li .sub-menu li{
+.menu li .sub-menu li{
     display:flex;
     align-items: center;
     padding:0.5rem 0;
     list-style: none;
     color:hsl(0, 0%, 41%);
 }
-ul.menu li .sub-menu li i{
+.menu li .sub-menu li i{
     margin-right:5px;
     font-size:1.2rem;
 }
-ul.menu li .sub-menu li a{
+.menu li .sub-menu li a{
     text-decoration:none;
+
+}
+
+@media only screen and (min-width: 768px){
+    nav{
+        position: relative;
+        width:100%;
+        position:fixed;
+        top:0;
+        
+    }
+    .menu{
+        display: flex;
+        flex-direction: row;
+        position:fixed;
+    }
+    .menu > li{
+        width:6.7rem;
+        padding:0 0.5rem;
+    }
+    .menu li#dropdown .sub-menu{
+        border:1px solid rgb(236, 236, 236);
+        border-radius:5%;
+        position: absolute;
+        margin:0.5rem 0.5rem 0.5rem 0;
+        padding:0.5rem;
+        left:0;
+        
+    }
+    .menu li#dropdown .sub-menu li{
+        padding:0.5rem 0;
+        margin:0;
+    }
+    .menu li#dropdown .sub-menu li i{
+        margin:0 0.5rem 0 0;
+    }
 
 }
