@@ -1,6 +1,6 @@
 let dropdown = document.getElementById("dropdown");
 let submenu = document.querySelector(".sub-menu");
-let dropDownIcon = document.querySelector("i");
+let dropDownIcon = document.querySelector(".menu #dropdown i");
 let listItem = document.querySelector(".menu li");
 let burgerIcon = document.querySelector(".fa-bars")
 let closeIcon = document.querySelector(".fa-xmark");
