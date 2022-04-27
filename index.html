@@ -7,16 +7,21 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600&family=Merriweather:ital@0;1&family=Work+Sans:wght@400;500;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="mobile">
+    <nav class="mobile-nav">
         <ul class="menu">
-            <li><a href="#">Features</a>
+            <li id="dropdown"><a href="#">Features</a>
+                <i class="fa-solid fa-angle-down"></i>
                 <ul class="sub-menu">
-                    <li><a href="#">Todo List</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Planning</a></li>
+                    <li><i class="fa-solid fa-clipboard-list"></i><a href="#">Todo List</a></li>
+                    <li><i class="fa-solid fa-calendar-day"></i><a href="#">Calendar</a></li>
+                    <li><i class="fa-solid fa-bell"></i><a href="#">Reminders</a></li>
                 </ul>
             </li>
             <li><a href="#">Company</a></li>
@@ -24,5 +29,6 @@
             <li><a href="#">About</a></li>
         </ul>
     </nav>
+    <script src="script.js"></script>
 </body>
 </html>
